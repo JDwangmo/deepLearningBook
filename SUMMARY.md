@@ -5,7 +5,7 @@
    * Introduce
 * 1 [Introduction](https://github.com/JDwangmo/deepLearningBook#1-introduction-from-httpwwwdeeplearningbookorgcontentsintrohtml)：
    * [Part I: Applied Math and Machine Learning Basics](https:/github.com/JDwangmo/deeplearningbookpart-i-applied-math-and-machine-le.md)
-       * [2 Linear Algebra](https:/github.com/JDwangmo/deepLearningBook#2-linear-algebra-from-httpwwwdeeplearningbookorgcontentslinear_algebrahtml)
+       * [2 Linear Algebra](https:/github.com/JDwangmo/deeplearningbook2-linear-algebra-from-httpwwwdeepl.md)
        * 3 Probability and Information Theory
        * 4 Numerical Computation
        * 5 Machine Learning Basics
