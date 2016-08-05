@@ -1,4 +1,4 @@
-# 1 [Introduction](htt):
+# 1 Introduction:
 
 [pdf文档](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/book/www.deeplearningbook.org_contents_intro.pdf) from http://www.deeplearningbook.org/contents/intro.html
 
