@@ -47,6 +47,7 @@
             - 特征学习和映射学习两者同时学的好处在于实现了end-to-end的学习，这使得AI系统可以快速的迁移到一个新任务，而不需要人工造任何的特征（减少人工干预，更智能）。一个好的representation learning算法甚至可以在几分钟学习到一个简单任务的良好特征集合。大大减少了人造特征的工作量。
             - algorithm example: 
                 - autoencoder（自编码）：`P4-bottom`.由一个encoder函数和一个decoder函数构成。An autoencoder is the combination of an encoder function that converts the input data into a different representation, and a decoder function that converts the new representation back into the original format.可以用encoder的输出作为数据的表示形式。
+            - yesfasjflaj
 
 
 
