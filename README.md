@@ -1,9 +1,9 @@
 ### deepLearningBook
 #### deep learning 学习笔记
 > - 学习资料来自： 
-    - 英文的：http://www.deeplearningbook.org/
+    - 英文：http://www.deeplearningbook.org/
         - [完整版pdf下载](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/book/deeplearning（带参考文献).pdf)
-    - 中文的：http://mp.weixin.qq.com/s?__biz=MzIxMjAzNDY5Mg==&mid=503307054&idx=1&sn=d20623df35d1771dc548d545ed38f318&scene=18#wechat_redirect 
+    - 中文：http://mp.weixin.qq.com/s?__biz=MzIxMjAzNDY5Mg==&mid=503307054&idx=1&sn=d20623df35d1771dc548d545ed38f318&scene=18#wechat_redirect 
 
 ##### 目录：
 > - [Table of Contents](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/book/www.deeplearningbook.org_contents_TOC.pdf):更详细的目录列表
