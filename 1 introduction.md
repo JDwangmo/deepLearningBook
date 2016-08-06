@@ -29,7 +29,8 @@
     - machine learning is the only viable approach to building AI systems that can operate in complicated, real-world environments.
     - Deep learning is a particular kind of machine learning that achieves great power and flexibility by **learning to represent the world as a nested hierarchy of concepts, with each concept defined in relation to simpler concepts， and more abstract representations computed in terms of less abstract ones.**
 
-####最后给出DL在AI的地位：
+####最后给出DL在AI的地位（Figure 1.4）,以及各种AI方法的过程（Figure 1.5）：
 
-![结构图](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/image/venndiagram-about-dl.png "DL(Figure 1.4)")
+![结构图](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/image/venndiagram-about-dl.png=300*300 "DL(Figure 1.4)")
+![流程图](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/image/Figure-1.5.png "Figure 1.5"=300*300)
         
