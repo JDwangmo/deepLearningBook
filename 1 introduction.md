@@ -17,8 +17,10 @@
         - `P4-bottom`：不管人工设计特征还是设计学习特征的算法，我们的目标都是希望能够分离（separate）或者找出可以解释现有`可观察数据的变异/分叉/多样性因素`(**factors of variation** that explain the observed data)，这里的factors of variation 可以理解为导致任意两份数据/个体不一样的因素，即变异的原因。本文使用“factors”去表示导致各个来源（source）分离的影响因素，这些factors通常不是不能通过乘法运算结合的（not combined by multiplication）;这些因素通常很难可观的量化;而且，他们可能存在于未观察到物体或力量中，却影响着可观察到的量化。可以认为是事物的概念或者抽象。比如当我们分析一个语音识别的时候，the factors of variation 包括讲话者的年龄、性别、口音等等。具体看[原文英文,P4-bottom](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/book/www.deeplearningbook.org_contents_intro.pdf)解释。
             - 在现实应用场景中，很多factors of variation 会影响 一系列的数据，即这个factors还不够本质/判别力（discriminative），比如red car的像素点在晚上就跟黑色一样，所以就不能用一个像素点来做判断。同时如果以一个轮廓来判断一个car的话，也会因为角度、光线的原因，影响判断。所以通常应用中都会对fators进行分解（disentangle），并去除（discard）无用的。
             - 当然，从原始数据中提取出这样高层、抽象的特征是非常困难的。
-        - Deep learning: Deep learning 就是解决representation learning的一个方法，通过引入层次的概念，即从更简单的表示/概念中来构建更复杂高层的表示/概念。比如Figure1.2 就展示了人如果从原始像素到一些简单概念（比如角度、轮廓等），再到物体识别的过程。
+        - Deep learning（DL）: Deep learning 就是解决representation learning的一个方法，通过引入层次的概念，即从更简单的表示/概念中来构建更复杂高层的表示/概念。比如Figure1.2 就展示了人如果从原始像素到一些简单概念（比如角度、轮廓等），再到物体识别的过程。
             - quintessential example:
-                - multilayer perceptron(MLP): 
+                - multilayer perceptron(MLP): feedforward deep network。可以将MLP看作一个函数，即将输入映射到输出，当然这个函数是由需要简单的函数够成的（ is formed by composing many simpler functions）
+            - 可以有两个角度（perspective）来理解DL。一，就是原本定义，即一层层的不断的学习数据的representation; 二，DL也可以看作是一个分步骤的程序(multi-step program),每一层的表示可以当作并行执行了一系列指令后计算机的内存（memory，记忆）。构建更深的网络，也就意味着可以执行更复杂的指令。这种序列化类型的指令有种好处，就是回溯回更早指令的结果（refer back to earlier instructions）
+            - Depth: `P7-bottom`: 关于DL网络的 depth ，有两种measure方法：一、计算图方法（computational graph）：整个网络基于执行多少个序列指令，但有个缺点，就是使用不同函数构成的网络（但完成同样功能），会造成depth不同，如 Figure 1.3; 二、概念图方法（conceptual graph）：这种观点 ragard the depth as being **not the depth of the computational graph but the depth of the graph describing how concepts are related to each other**. 以多少层概念（数据表示）来作为depth。第一种方法要比第二种方法计算出来的deeper，原因是系统对底层的理解，可以通过高层的理解反过来继续refine系统对底层的理解（This is because the system’s understanding of the simpler concepts can be refined given information about the more complex concepts）。所以当网络是一个递归网络的时候，使用方法1计算出来的depth会更深，因为会对网络的每个概念层计算多次**（备注：这里是读者的理解，可能不准确，之后会再重读下）**。
         
                 
