@@ -19,7 +19,8 @@
             - 当然，从原始数据中提取出这样高层、抽象的特征是非常困难的。
 
 --
-- Deep learning（DL）:是ML的一个分支， Deep learning 的提出就是解决representation learning的一个方法，通过引入层次的概念，即从更简单的表示/概念中来构建更复杂高层的表示/概念。比如Figure1.2 就展示了人如果从原始像素到一些简单概念（比如角度、轮廓等），再到物体识别的过程。
+
+- ##### Deep learning（DL）:是ML的一个分支， Deep learning 的提出就是解决representation learning的一个方法，通过引入层次的概念，即从更简单的表示/概念中来构建更复杂高层的表示/概念。比如Figure1.2 就展示了人如果从原始像素到一些简单概念（比如角度、轮廓等），再到物体识别的过程。
     - quintessential example:
         - multilayer perceptron(MLP): feedforward deep network。可以将MLP看作一个函数，即将输入映射到输出，当然这个函数是由需要简单的函数够成的（ is formed by composing many simpler functions）
     - 可以有两个角度（perspective）来理解DL。一，就是原本定义，即一层层的不断的学习数据的representation; 二，DL也可以看作是一个分步骤的程序(multi-step program),每一层的表示可以当作并行执行了一系列指令后计算机的内存（memory，记忆）。构建更深的网络，也就意味着可以执行更复杂的指令。这种序列化类型的指令有种好处，就是回溯回更早指令的结果（refer back to earlier instructions）
