@@ -33,8 +33,11 @@
 
 ![结构图](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/image/venndiagram-about-dl.png =300x300 )
 
+![设置图片宽度高度](http://image-path.png =300x200)
 
-![流程图](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/image/Figure-1.5.png =300x300)
+![流程图](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/image/Figure-1.5.png "Figure 1.5" )
+
+![流程图](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/image/Figure-1.5.png)
         
 
 ![流程图](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/image/Figure-1.5.png "Figure 1.5" =300*300)
