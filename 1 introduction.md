@@ -31,5 +31,5 @@
 
 ####最后给出DL在AI的地位：
 
-![结构图](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/reference/image/venndiagram-about-dl.png "DL(Figure 1.4)")
+![结构图](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/image/venndiagram-about-dl.png "DL(Figure 1.4)")
         
