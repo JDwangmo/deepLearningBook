@@ -31,9 +31,9 @@
 
 ####最后给出DL在AI的地位（Figure 1.4）,以及各种AI方法的过程（Figure 1.5）：
 
-![结构图](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/image/venndiagram-about-dl.png =300x300 )
+![结构图](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/image/venndiagram-about-dl.png  )
 
-![设置图片宽度高度](http://image-path.png =300x200)
+![设置图片宽度高度](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/image/Figure-1.5.png =300x200)
 
 ![流程图](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/image/Figure-1.5.png "Figure 1.5" )
 
