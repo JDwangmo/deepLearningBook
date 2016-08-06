@@ -6,8 +6,8 @@
 - 人工智能真正的挑战是如何去解决那些人可以很直观解决，但是很难正式描述的事情（如果人类可以很容易正式描述出来的话，就不是难点了，直接一系列规则即可），比如口语理解、人脸识别等。The true challenge to artificial intelligence proved to be solving the tasks that are **easy for people to perform but hard for people to describe formally**—problems that we solve intuitively, that feel automatic, like recognizing spoken words or faces in images. 
 - `P1-bottom`：本书就是关于这些直观问题的解决方案，即允许机器从经验中学习，并以一系列**层次性的概念**来理解这个世界（learn from experience and understand the world in terms of a **hierarchy of concepts**），每个概念都是基于更简单的概念或其关系来定义的（with each concept defined in terms of its relation to simpler concepts）。而这层次性的概念也使得计算机可以不断的从 world 中收集知识（人也是这样子学习的），并从更简单的（概念）层次，进而学习更复杂（complicated）的概念.(The hierarchy of concepts allows the computer to learn complicated concepts by building them out of simpler ones.)。如果我们要画一个图来描述这个过程的话，那么可想这个图的深度是非常 deep 的，所以我们把这种方法（solution，解决方案）称作 **deep learning，即层次性学习**。
 - 计算机擅长规则或者正式的事情，而不擅长学习不正式或主观的事情： 我们人类每天获取的知识绝多数是来自于人客观或主观的感知，而这是很难以一个正式的方式表达的（Much of this knowledge is subjective and intuitive, and therefore difficult to articulate in a formal way.）。所以计算机若想实现人工智能，一个关键挑战就在于如何将这些非正式的信息传递给计算机（One of the key challenges in artificial intelligence is how to get this informal knowledge into a computer）。有两种方式：
-    - 1. hard-code，或者叫做 knowledge base： 即 使用正式语言来对world进行描述（hard-code knowledge about the world in formal languages）,这需要人类设计足够复杂的规则去准确的描述world。但这个太难了，以这种方式构建的系统基本上没有获得巨大成功的。`P2-left`举了个FredWhileShaving的例子，即Cyc系统（knwoledge base system）无法理解 在早上剃胡须的Fred（人名）这是个什么东西，因为它认为人不是不应该包含电子器件的，但是FredWhileShaving又包含了电子器件，所以它会检测到不一致性。
-    - 2. machine learning（ML）： hard-code面临的困难也意味着，**机器应该拥有取获取自己知识的能力，即从原始数据（底层）到规则/模式（高层）的获取知识的能力，这个能力就叫做机器学习（ML）**。简单的机器学习算法比如有：逻辑回归模型（LR）、朴素bayes（NB）。
+    1. hard-code，或者叫做 knowledge base： 即 使用正式语言来对world进行描述（hard-code knowledge about the world in formal languages）,这需要人类设计足够复杂的规则去准确的描述world。但这个太难了，以这种方式构建的系统基本上没有获得巨大成功的。`P2-left`举了个FredWhileShaving的例子，即Cyc系统（knwoledge base system）无法理解 在早上剃胡须的Fred（人名）这是个什么东西，因为它认为人不是不应该包含电子器件的，但是FredWhileShaving又包含了电子器件，所以它会检测到不一致性。
+    2. machine learning（ML）： hard-code面临的困难也意味着，**机器应该拥有取获取自己知识的能力，即从原始数据（底层）到规则/模式（高层）的获取知识的能力，这个能力就叫做机器学习（ML）**。简单的机器学习算法比如有：逻辑回归模型（LR）、朴素bayes（NB）。
         - **这些简单机器模型的基本流程是输入数据的某种表示形式（data reprezation，or feature ，特征，经常需要人工提取），接着去学习这些输入和输出的关系。**也就是这些简单机器学习算法严重依赖数据的表示形式，特征造得好和坏，对结果影响特别大（It is not surprising that the choice of representation has an enormous effect on the performance of machine learning algorithms）。
         - 对于简单的任务，我们可以很容易的提取出有价值的特征，然后丢给一个简单机器学习算法去学习即可完美解决该任务的问题。但是**对于很多任务，是很难去知道要提取哪些特征的**。比如，假设我们想取写一个程序取检测图像中的cars，因为我们知道cars有轮子（wheels），那么我们就可以以是否有轮子来作为特征。但是非常unfortunately，机器并不知道轮子是怎样子（it is difficult to describe exactly what a wheel looks like in terms of pixel values），甚至轮子还可能出现光照、阴暗等的影响等等。
         - **representation learning: `P4-top`. 那么数据表示（特征）这个问题的一个解决方法就是机器学习不仅去发现从数据表示（特征）到输出之间的关系，同时也去学习数据表示形式自身（原始输入到特征的mapping）**,这就叫做**表示学习或特征学习**。同时学习到的数据表示（特征）也比人造的特征表现要好。
@@ -19,6 +19,6 @@
             - 当然，从原始数据中提取出这样高层、抽象的特征是非常困难的。
         - Deep learning: Deep learning 就是解决representation learning的一个方法，通过引入层次的概念，即从更简单的表示/概念中来构建更复杂高层的表示/概念。比如Figure1.2 就展示了人如果从原始像素到一些简单概念（比如角度、轮廓等），再到物体识别的过程。
             - quintessential example:
-                - MLP
+                - multilayer perceptron(MLP): 
         
                 
