@@ -3,7 +3,9 @@
 > - 学习资料来自： 
     - 英文：http://www.deeplearningbook.org/
         - [完整版pdf下载](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/book/deeplearning-带参考文献.pdf)
-    - 中文：https://hit-scir.gitbooks.io/neural-networks-and-deep-learning-zh_cn/content/index.html
+    - 中文：
+        - https://hit-scir.gitbooks.io/neural-networks-and-deep-learning-zh_cn/content/index.html
+        - [深度 | 深度学习与神经网络全局概览：核心技术的发展历程](http://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650717969&idx=1&sn=712e4880e63db42bcb4db5ba06c9856d&scene=23&srcid=080661PJdyEIF6VSj4JRQ7nq#rd)
 
 ##### 目录：
 > - [Table of Contents](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/book/www.deeplearningbook.org_contents_TOC.pdf):更详细的目录列表
