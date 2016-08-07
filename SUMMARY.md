@@ -4,7 +4,7 @@
 * Part 0:
    * [1 Introduction:](1 introduction.md)
    * [1.1 History:](1.1 history.md)
-* Part I: Applied Math and Machine Learning Basics
+* [Part I: Applied Math and Machine Learning Basics](Part I: Applied Math and Machine Learning Basics.md)
    * [2 Linear Algebra](2 Linear Algebra.md)
    * 3 Probability and Information Theory
    * 4 Numerical Computation
