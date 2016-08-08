@@ -24,6 +24,10 @@ $$x_{-1}$$
         - dot product: 点积,matrix product C = AB as computing $$C_{i,j}$$ as the dot product between row i of A and column j of B.
         - 遵循分配律（distributive）和结合律（associative）：**A ( B + C) = AB + AC**. **A(BC) = (AB)C** 。
         - 矩阵之间不符合交换律（commutative），但是向量之间符合。
-    - 单位矩阵(identity matrix)：`P6-center,2.3`: 单位矩阵是指其与任何矩阵相乘时，不会改变任何矩阵的数值（An identity matrix is a matrix that does not change any vector when we multiply that vector by that matrix）,其实就是个对角线方向数值全为1,而其他位置都为0的方0矩阵（all of the entries along the main diagonal are 1, while all of the other entries are zero）。通常用$$I_n$$表示n维的单位矩阵，$$I_n ∈ R^{n*n} $$, and $$∀x ∈ R^n $$,$$I_nx = x$$
+    - 单位矩阵(identity matrix)：`P6-center,2.3`: 单位矩阵是指其与任何矩阵相乘时，不会改变任何矩阵的数值（An identity matrix is a matrix that does not change any vector when we multiply that vector by that matrix）,其实就是个对角线方向数值全为1,而其他位置都为0的方0矩阵（all of the entries along the main diagonal are 1, while all of the other entries are zero）。通常用$$I_n$$表示n维的单位矩阵，$$I_n$$ ∈ $$R^{n*n} $$, and ∀x ∈ $$R^n$$,$$I_nx = x$$
     - 矩阵逆（matrix inverse）: $$A^{-1}A=I_n$$.
-- 我们学习线性代数，目标就是要解方程：**Ax = b**（equation 2.11），A是一个矩阵，b是一个向量，都是已知，要求向量x的值。
+- 我们学习线性代数，目标就是要解方程：**Ax = b**（equation 2.11），A是一个矩阵，b是一个向量，都是已知，要求向量x的值。如下：
+```
+Ax = b
+
+```
