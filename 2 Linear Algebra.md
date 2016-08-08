@@ -52,8 +52,8 @@ $$x = A^{-1}b$$
     - 假如矩阵**A**不是方矩阵或者方矩阵但不奇异，仍然可能有解，但是我们不用矩阵逆的方法来求解。
 
 2.5 Norms（范数）：向量的大小
-- 在机器学习（ML）中，我们通常用一个范数（norm）来衡量一个向量的大小（measure the size of vectors using a function callerd a norm）。表示为 $$L^p$$:
+- 在机器学习（ML）中，我们通常用一个范数（norm）来衡量一个向量的大小（measure the size of vectors using a function callerd a norm）。表示为 $$L^p$$,公式如下:
     
-||x||_p = \left( \sum_{i}|x_i|^p \right)^\frac{1}{p}
+$$ ||x||_p = \left( \sum_{i}|x_i|^p \right)^\frac{1}{p}  p \in R,p \geq 1 $$   
 
 - 
