@@ -51,9 +51,9 @@ $$x = A^{-1}b$$
 - 综上，我们可以得到一个结论：矩阵**A**必须是**一个方矩阵（square matrix），即 m==n 切 所有的列（n个）向量之间都是线性无关的**。**这样一个方矩阵（a square matrix with linearly dependent columns）**,叫做**奇异矩阵（singular）**
     - 假如矩阵**A**不是方矩阵或者方矩阵但不奇异，仍然可能有解，但是我们不用矩阵逆的方法来求解。
 
-2.5 Norms（范数）：向量的大小
+2.5 Norms（范数）：`P9-top,2.5`向量的大小
 - 在机器学习（ML）中，我们通常用一个范数（norm）来衡量一个向量的大小（measure the size of vectors using a function callerd a norm）。表示为 $$L^p$$,公式如下:
     
-$$ ||x||_p = \left( \sum_{i}|x_i|^p \right)^\frac{1}{p}  p \in R,p \geq 1 $$   
+    $$ ||x||_p = \left( \sum_{i}|x_i|^p \right)^\frac{1}{p} \qquad  p \in R,p \geq 1 $$   
 
-- 
+- 范数 就是一个将向量转为非负数的值。
