@@ -24,10 +24,18 @@ $$x_{-1}$$
         - dot product: 点积,matrix product C = AB as computing $$C_{i,j}$$ as the dot product between row i of A and column j of B.
         - 遵循分配律（distributive）和结合律（associative）：**A ( B + C) = AB + AC**. **A(BC) = (AB)C** 。
         - 矩阵之间不符合交换律（commutative），但是向量之间符合。
-    - 单位矩阵(identity matrix)：`P6-center,2.3`: 单位矩阵是指其与任何矩阵相乘时，不会改变任何矩阵的数值（An identity matrix is a matrix that does not change any vector when we multiply that vector by that matrix）,其实就是个对角线方向数值全为1,而其他位置都为0的方0矩阵（all of the entries along the main diagonal are 1, while all of the other entries are zero）。通常用$$I_n$$表示n维的单位矩阵，$$I_n$$ ∈ $$R^{n*n} $$, and ∀x ∈ $$R^n$$,$$I_nx = x$$
+    - 单位矩阵(identity matrix)：`P6-center,2.3`: 单位矩阵是指其与任何矩阵相乘时，不会改变任何矩阵的数值（An identity matrix is a matrix that does not change any vector when we multiply that vector by that matrix）,其实就是个对角线方向数值全为1,而其他位置都为0的方0矩阵（all of the entries along the main diagonal are 1, while all of the other entries are zero）。通常用$$I_n$$表示n维的单位矩，$$I_n$$ ∈ $$R^{n*n} $$, and ∀x ∈ $$R^n$$,$$I_nx = x$$
     - 矩阵逆（matrix inverse）: $$A^{-1}A=I_n$$.
-- 我们学习线性代数，目标就是要解方程：**Ax = b**（equation 2.11），A是一个矩阵，b是一个向量，都是已知，要求向量x的值。如下：
-```
-Ax = b
+- 我们学习线性代数，目标就是要解方程：**Ax = b**（`P5-center,equation 2.11`），A是一个矩阵(∈$$R^{m*n}$$)，b是一个向量(∈$$R^m$$)，都是已知，要求向量x(∈$$R^n$$)的值。如下：
 
 ```
+**Ax = b**
+$$A^{-1}Ax=A^{-1}b$$.
+$$I_nx=A^{-1}b$$
+$$x = A^{-1}b$$
+但有个关键问题就是，能够找到$$A^{-1}$$（this process depends on it being possible to find $$A^{-1}$$）。不过实际应用中很少用到$$A^{-1}$$，更多的是作为一个理论工具。
+- 
+```
+
+- linear combination
+
