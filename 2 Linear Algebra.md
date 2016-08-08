@@ -26,16 +26,17 @@ $$x_{-1}$$
         - 矩阵之间不符合交换律（commutative），但是向量之间符合。
     - 单位矩阵(identity matrix)：`P6-center,2.3`: 单位矩阵是指其与任何矩阵相乘时，不会改变任何矩阵的数值（An identity matrix is a matrix that does not change any vector when we multiply that vector by that matrix）,其实就是个对角线方向数值全为1,而其他位置都为0的方0矩阵（all of the entries along the main diagonal are 1, while all of the other entries are zero）。通常用$$I_n$$表示n维的单位矩，$$I_n$$ ∈ $$R^{n*n} $$, and ∀x ∈ $$R^n$$,$$I_nx = x$$
     - 矩阵逆（matrix inverse）: $$A^{-1}A=I_n$$.
-- 我们学习线性代数，目标就是要解方程：**Ax = b**（`P5-center,equation 2.11`），A是一个矩阵(∈$$R^{m*n}$$)，b是一个向量(∈$$R^m$$)，都是已知，要求向量x(∈$$R^n$$)的值。如下：
+- 我们学习线性代数，目标就是要解方程：**Ax = b**（`P5-center,equation 2.11`），A是一个矩阵(∈$$R^{m×n}$$)，b是一个向量( ∈$$R^m$$)，都是已知，要求解向量x( ∈$$R^n$$)的值。如下：
 
-```
 **Ax = b**
 $$A^{-1}Ax=A^{-1}b$$.
 $$I_nx=A^{-1}b$$
 $$x = A^{-1}b$$
-但有个关键问题就是，能够找到$$A^{-1}$$（this process depends on it being possible to find $$A^{-1}$$）。不过实际应用中很少用到$$A^{-1}$$，更多的是作为一个理论工具。
-- 
-```
+- 但有个关键问题就是，能够找到$$A^{-1}$$（this process depends on it being possible to find $$A^{-1}$$）。不过实际应用中很少用到$$A^{-1}$$，更多的是作为一个理论工具。
 
 - linear combination
-
+- A的每一列$$c_i$$可以当作从原点出发到这个坐标的方向，$$x_i$$当作这个方向上的距离。
+- **生成子空间**：`P7-bottom`：区间，跨度，或者叫生成子空间。是由基向量构成的所有可能点的空间。（The **span **of a set of vectors is the set of all points obtainable by linear combination of the original vectors）
+    - `P8-top`:因此，求解Ax=b的问题转而变成判断向量**b**是否在矩阵**A**的所有列向量构成的子空间（span）中，在这里，也叫做 column space or the range of **A**。
+    - **推理：**为了使得对于任意的**b**都有解，则**A**的**列数必须大于等于行数（n>=m）**。 In order for the system Ax = b to have a solution for all values of b ∈ R m , we therefore require that the column space of A be all of R m . If any point in R m is excluded from the column space, that point is a potential value of b that has no solution. The requirement that the column space of A be all of R m implies immediately that A must have at least m columns, i.e., n m ≥ . Otherwise,假设consider a 3 × 2 matrix. The target b is 3-D, but x is only 2-D, so modifying the value of x at best allows us to trace out a 2-D plane within $$R^3$$ . The equation has a solution if and only if b lies on that plane.相当于A的每一列提供了一个方向，在这个例子里面就是两个方向（有2列），每一行提供了一个维度，这里是3D（因为有三行），问题就变成了如果让3D空间中的2个点，去生成一个子空间（span）取覆盖整个3D空间（即使得任意的 $$**b** \in R^3$$ 都能有解）。**提供2个方向，怎么走才能到达b点。**
+    - 但是，要注意：n
