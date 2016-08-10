@@ -29,9 +29,13 @@
 - 我们学习线性代数，目标就是要解方程：**Ax = b**（`P5-center,equation 2.11`），A是一个矩阵(∈$$R^{m*n}$$)，b是一个向量( ∈$$R^m$$)，都是已知，要求解向量x( ∈$$R^n$$)的值。如下：
 
 **Ax = b**
+
 $$A^{-1}Ax=A^{-1}b$$.
+
 $$I_nx=A^{-1}b$$
+
 $$x = A^{-1}b$$
+
 - 但有个关键问题就是，能够找到$$A^{-1}$$（this process depends on it being possible to find $$A^{-1}$$）。不过实际应用中很少用到$$A^{-1}$$，更多的是作为一个理论工具。
 
 - linear combination
@@ -56,4 +60,13 @@ $$x = A^{-1}b$$
     
     $$ ||x||_p = \left( \sum_{i}|x_i|^p \right)^\frac{1}{p} \qquad  p \in R,p \geq 1 $$   
 
-- 范数 就是一个将向量转为非负数的值。
+- 范数 就是一个将向量转为非负数的值。可以理解为到原点的距离（On an intuitive level, the norm of a vector x measures the distance from the origin to the point x）。符合这样一些条件：`P9,center`
+    - f(**x**) = 0 ⇒ x = 0 
+    - f( **x**+**y** ) ≤ f ( **x** )+ f( **y**) (the triangle inequality,两边之和大于第三边)。
+    - ∀α ∈ R,f(α**x**) = |α|f(**x**)
+    - 一些常用的范数：
+        - `P9-center`:p=2时，即$$L^2$$范数，也叫 **欧基里德 范数（Euclidean norm）**，通常表示为||**x**||,省略掉下标2。更常用的是用**$$L^2$$的平方（squared $$L^2$$ norm）**，可以通过** $$x^Tx$$**计算得出。因为：The squared $$L^2$$ norm is more convenient to work with mathematically and computationally than the $$L^2$$ norm itself. 比如：squared $$L^2$$ 的对**x**每个元素的求导（$$2|x_i|$$），只跟x的对应元素有关，而 $$L^2$$ 跟整个**x**有关(the derivatives of the **squared $$L^2$$ norm with respect to each element of x each depend only on the corresponding element of x**, while all of the derivatives of the $$L^2$$ norm depend on the entire vector)。
+        - `P10-top`: p = 1时，即 即$$L^1$$范数
+        - **Important point**： `P9-bottom to P10-top`： $$L^2$$范数在原点附近时，增长速度太慢，区分不出 0 和接近0的small number 的区别，如果对这个比较敏感时，这是就会使用$$L^1$$范数，在所有位置的增长速度都一样。（the squared $$L^2$$ norm may be undesirable because **it increases very slowly near the origin**. In several machine learning applications, it is important to **discriminate between elements that are exactly zero and elements that are small but nonzero**. In these cases, we turn to a function that** grows at the same rate in all location**s, but retains mathematical simplicity: the $$L^1$$ norm）。The **$$L^1$$ norm is commonly used in machine learning when the difference between zero and nonzero elements is very important**. **Every time an element of x moves away from 0 by $$\epsilon$$, the $$L^1$$ norm increases by $$\epsilon$$**.
+        - "$$L^0$$": 计算向量中不为0的元素个数，但这是一个不正确的术语，因为这不是一个范数，不符合范数的规律，比如向量收放$$\alpha$$倍，都不会改变非0的个数，这不符合范数定义的第三条（∀α ∈ R,f(α**x**) = |α|f(**x**)）。We sometimes measure the size of the vector by counting its number of nonzero elements. Some authors refer to this function as the “$$L^0$$ norm,” but this is incorrect terminology. The number of non-zero entries in a vector is not a norm, because scaling the vector by α does not change the number of nonzero entries. The L 1 norm is often used as a substitute for the number of nonzero entries. 
+        
