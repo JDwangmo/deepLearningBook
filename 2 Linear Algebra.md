@@ -5,6 +5,8 @@
 ##目录：
 > - 2.1 Scalar,Vectors,Matrices and Tensors
 > - 2.5 Norms（范数）
+> - 2.6 一些特殊矩阵或者向量(Special Kinds of Matrics and Vectors)
+    - 对角矩阵（Diagonal matrices）
 
 2.1 Scalar,Vectors,Matrices and Tensors
 
@@ -77,8 +79,8 @@
     - 对于矩阵的大小，比较常用的是 Frobenius norm ,类似于向量的 $$L^2$$ norm: $$||A||_F=\sqrt(\sum_{i,j}A^2_{i,j})$$
     - 两个向量的点积(dot prodcut)可以写成 范数的 形式： $$x^Ty=||x||_2||y||_2cos\theta$$ ，其中$$\theta$$是x和y之间的角度。
     
-2.6 一些特殊矩阵或者向量(Special Kinds of Matrics and Vectors):
-- **对角矩阵（Diagonal matrices）**: `P10-bottom``,除了主对角线，其他元素都是0.比如单元矩阵就算是其中一个。通常用 diag(**v**)的形式 来表示对角方矩阵（square diagonal matrix）,其中**v**对应矩阵的对角线（We write diag(v) to denote a square diagonal matrix whose diagonal entries are given by the entries of the vector v）。对角矩阵比较吸引人的地方在于：
-    - 与一个对角矩阵相乘的计算代价非常低，比如计算： diag(**v**)**x**，我们仅仅需要将v和x点乘，即 $$diag(v)x = v \odot x$$(To compute diag(v)x, we only need to scale each element $$x_i$$ by $$v_i$$. In other words, $$diag(v)x = v \odot x$$)。 
-    - 对一个对角矩阵求逆也是非常方便。
+##### 2.6 一些特殊矩阵或者向量(Special Kinds of Matrics and Vectors):
+- **对角矩阵（Diagonal matrices）**: `P10-bottom``,除了主对角线，其他元素都是0.比如单元矩阵就算是其中一个。通常用 diag(**v**)的形式 来表示**对角方矩阵（square diagonal matrix）（注意这里是方矩阵！）**,其中**v**对应矩阵的对角线（We write diag(v) to denote a square diagonal matrix whose diagonal entries are given by the entries of the vector v）。对角矩阵比较吸引人的地方在于计算代价低：
+    - 与一个**对角方矩阵相乘(注意这里是方矩阵)**的计算代价非常低，比如计算： diag(**v**)**x**，我们仅仅需要将v和x点乘，即 $$diag(v)x = v \odot x$$(To compute diag(v)x, we only need to scale each element $$x_i$$ by $$v_i$$. In other words, $$diag(v)x = v \odot x$$)。 
+    - 对一个**对角方矩阵求逆（注意这里是方矩阵）**也是非常方便（Inverting a square diagonal matrix is also efficient）。当每个对角元素非0时，有逆矩阵
         
