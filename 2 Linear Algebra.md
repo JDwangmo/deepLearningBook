@@ -2,6 +2,10 @@
 
 [pdf文档](https://raw.githubusercontent.com/JDwangmo/deepLearningBook/master/book/www.deeplearningbook.org_contents_linear_algebra.pdf) from http://www.deeplearningbook.org/contents/linear_algebra.html
 
+##目录：
+> - 2.1 Scalar,Vectors,Matrices and Tensors
+> - 2.5 Norms（范数）
+
 2.1 Scalar,Vectors,Matrices and Tensors
 
 - 标量（Scalars）：一个单独的数字（a single number）,可以是实数（real-valued scalar）或自然数（nutural numer scalar）。一般用小写的变量名：比如 “Let s ∈ R be the slope of the line.”
@@ -42,8 +46,8 @@
 - **Important point：**`P7-center`:A的每一列$$c_i$$可以当作从原点出发到这个坐标的方向，$$x_i$$当作这个方向上的距离（走多远）。这种转换理解非常棒。对于后面的理解很有帮助。看原文：To analyze how many solutions the equation has, we can think of **the columns of A as specifying different directions we can travel from the origin (the point specified by the vector of all zeros，即原点)**, and **determine how many ways there are of reaching b**. In this view, **each element of x specifies how far we should travel in each of these directions**, **with $$x_i$$ specifying how far to move in the direction of column i**。
 - **生成子空间（Span）**：`P7-bottom`：区间，跨度，或者叫生成子空间。是由基向量构成的所有可能点的空间。（The **span **of a set of vectors is the set of all points obtainable by linear combination of the original vectors）
     - `P8-top`:因此，求解Ax=b的问题转而变成判断向量**b**是否在矩阵**A**的所有列向量构成的子空间（span）中，在这里，也叫做 **column space** or the range of **A**。
-    - **推理：**为了使得对于任意的**b**都有解，则**A**的**列数必须大于等于行数（n>=m）**。 In order for the system Ax = b to have a solution for all values of b ∈ $$R^m$$ , we therefore require that the column space of A be all of $$R^m$$ . If any point in R m is excluded from the **column space**, that point is a potential value of b that has no solution. The requirement that the column space of A be all of R m implies immediately that A must have at least m columns, i.e., n m ≥ . Otherwise,假设consider a 3 × 2 matrix. The target b is 3-D, but x is only 2-D, so modifying the value of x at best allows us to trace out a 2-D plane within $$R^3$$ . The equation has a solution if and only if b lies on that plane.相当于A的每一列提供了一个方向，在这个例子里面就是两个方向（有2列），每一行提供了一个维度，这里是3D（因为有三行），问题就变成了如果让3D空间中的2个点，去生成一个子空间（span）取覆盖整个3D空间（即使得任意的 $$**b** \in R^3$$ 都能有解）。**提供2个方向，怎么走才能到达b点。**
-    - 但是，要注意：n$$\geq$$m 只是对于每个$$**b** \in R^m$$有解的一个必要条件（necessary condition）,不是一个充分条件（Having n ≥ m is only a necessary condition for every point to have a solution. It is not a sufficient condition），因为有可能**A**中有一些列是冗余的（redundant）。
+    - **推理：**为了使得对于任意的**b**都有解，则**A**的**列数必须大于等于行数（n>=m）**。 In order for the system Ax = b to have a solution for all values of b ∈ $$R^m$$ , we therefore require that the column space of A be all of $$R^m$$ . If any point in $$R^m$$ is excluded from the **column space**, that point is a potential value of b that has no solution. The requirement that the column space of A be all of $$R^m$$ implies immediately that A must have at least m columns, i.e., n ≥ m . Otherwise,假设consider a 3 × 2 matrix. The target b is 3-D, but x is only 2-D, so modifying the value of x at best allows us to trace out a 2-D plane within $$R^3$$ . The equation has a solution if and only if b lies on that plane.相当于A的每一列提供了一个方向，在这个例子里面就是两个方向（有2列），每一行提供了一个维度，这里是3D（因为有三行），问题就变成了如果让3D空间中的2个点，去生成一个子空间（span）取覆盖整个3D空间（即使得任意的 $$\mathbf{b} \in R^3$$ 都能有解）。**提供2个方向，怎么走才能到达b点。**
+    - 但是，要注意：$$ n \geq m $$ 只是对于每个  $$ \mathbf{b} \in R^m$$有解的一个必要条件（necessary condition）,不是一个充分条件（Having n ≥ m is only a necessary condition for every point to have a solution. It is not a sufficient condition），因为有可能**A**中有一些列是冗余的（redundant）。
         - For example, Consider a 2 ×2 matrix where both of the columns are identical(两列是一样的). This has the** same column space **as a 2 × 1 matrix containing only one copy of the replicated column（**也就是现在的columns space 是跟包含一个columns的 2 × 1 matrix是一样的**）. In other words, the column space is still just a line, and fails to encompass all of $$R^2$$ , even though there are two columns。（**columns space只是一条线，无法完全覆盖2维空间。**）
         - 上面这种冗余情况，称作**线性依赖（linear dependence）**。在一个向量集合里，假如任意一个向量都无法由其他向量**线性组合（linear combination）**，那么这个向量集合是线性无关的（linear independent）（A set of vectors is linearly independent if no vector in the set is a linear combination of the other vectors）。假如增加一个向量到这个集合里，如果这个向量可以由原本集合中的向量线性组合(linear combination)，则这个向量的增加没有增大原本的集合的生成子空间（span）（ If we add a vector to a set that is a linear combination of the other vectors in the set, the new vector does not add any points to the set’s span）。
         - **推论：`P8-center`如果一个矩阵的 columns space 想去覆盖所有的 $$R^m$$,矩阵中必须有m个线性无关的列向量。This means that for the column space of the matrix to encompass all of $$R^m$$ , the matrix must contain at least one set of m linearly independent columns.**这对于**Ax = b**（`P5-center,equation 2.11`）是一个**充分必要条件。**即如果矩阵A的列向量是m个线性无关的向量（注意是刚刚好m个线性无关的列向量，而不是至少m个），那么对于任意的**b**都有**一个解**（have exactly a solution for every value of **b**）。
@@ -51,11 +55,11 @@
 
 - 好，接下来还是回到**一个矩阵是否有逆矩阵**的问题上来。首先必须确保**对于任意的b最多只有一个解（In order for the matrix to have an inverse, we additionally need to ensure that equation 2.11 has at most one solution for each value of b**）,即**矩阵A最多只能m个列**。
     - **对于一套 m个 相互线性无关的向量组，达到任意一个点（或者任意的向量**b**），都只有一种可能，即确定类基向量，空间的点都是可以通过唯一的坐标来确定的**。
-    - 如果有多套 线性无关向量组，则会有种解法，每套对应一种。
-- 综上，我们可以得到一个结论：矩阵**A**必须是**一个方矩阵（square matrix），即 m==n 切 所有的列（n个）向量之间都是线性无关的**。**这样一个方矩阵（a square matrix with linearly dependent columns）**,叫做**奇异矩阵（singular）**
+    - 如果有多套 线性无关向量组，则会有多种解法，每套对应一种。
+- 综上，我们可以得到一个结论：矩阵**A**必须是**一个方矩阵（square matrix），即 m==n 且 所有的列（n个）向量之间都是线性无关的**。**这样一个方矩阵（a square matrix with linearly dependent columns）**,叫做**奇异矩阵（singular）**
     - 假如矩阵**A**不是方矩阵或者方矩阵但不奇异，仍然可能有解，但是我们不用矩阵逆的方法来求解。
 
-2.5 Norms（范数）：`P9-top,2.5`向量的大小
+##### 2.5 Norms（范数）：`P9-top,2.5` 向量的大小
 - 在机器学习（ML）中，我们通常用一个范数（norm）来衡量一个向量的大小（measure the size of vectors using a function callerd a norm）。表示为 $$L^p$$,公式如下:
     
     $$ ||x||_p = \left( \sum_{i}|x_i|^p \right)^\frac{1}{p} \qquad  p \in R,p \geq 1 $$   
@@ -74,6 +78,7 @@
     - 两个向量的点积(dot prodcut)可以写成 范数的 形式： $$x^Ty=||x||_2||y||_2cos\theta$$ ，其中$$\theta$$是x和y之间的角度。
     
 2.6 一些特殊矩阵或者向量(Special Kinds of Matrics and Vectors):
-- **对角矩阵（Diagonal matrices）**: `P10-bottom``,除了主对角线，其他元素都是0.比如单元矩阵就算是其中一个。通常用 diag(**v**)的形式 来表示对角方矩阵（square diagonal matrix）,其中**v**对应矩阵的对角线（We write diag(v) to denote a square diagonal matrix whose diagonal entries are given by the entries of the vector v）。对角矩阵比较吸引人的地方在于
-    - 与一个对角矩阵相乘计算代价非常低，比如计算 diag(**v**)**x**，我们仅仅需要将v和x点乘，即 $$diag(v)x = v \odot x$$(To compute diag(v)x, we only need to scale each element $$x_i$$ by $$v_i$$. In other words, $$diag(v)x = v \odot x$$)。 
+- **对角矩阵（Diagonal matrices）**: `P10-bottom``,除了主对角线，其他元素都是0.比如单元矩阵就算是其中一个。通常用 diag(**v**)的形式 来表示对角方矩阵（square diagonal matrix）,其中**v**对应矩阵的对角线（We write diag(v) to denote a square diagonal matrix whose diagonal entries are given by the entries of the vector v）。对角矩阵比较吸引人的地方在于：
+    - 与一个对角矩阵相乘的计算代价非常低，比如计算： diag(**v**)**x**，我们仅仅需要将v和x点乘，即 $$diag(v)x = v \odot x$$(To compute diag(v)x, we only need to scale each element $$x_i$$ by $$v_i$$. In other words, $$diag(v)x = v \odot x$$)。 
+    - 对一个对角矩阵求逆也是非常方便。
         
