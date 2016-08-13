@@ -4,6 +4,7 @@
 
 ##目录：
 > - 2.1 Scalar,Vectors,Matrices and Tensors
+> - 2.3 Identity and Inverse Matrices （矩阵的逆）
 > - 2.5 Norms（范数）
 > - 2.6 一些特殊矩阵或者向量(Special Kinds of Matrics and Vectors)
     - 对角矩阵（Diagonal matrices）
@@ -32,6 +33,7 @@
         - 矩阵之间不符合交换律（commutative），但是向量之间符合。
     - 单位矩阵(identity matrix)：`P6-center,2.3`: 单位矩阵是指其与任何矩阵相乘时，不会改变任何矩阵的数值（An identity matrix is a matrix that does not change any vector when we multiply that vector by that matrix）,其实就是个对角线方向数值全为1,而其他位置都为0的方0矩阵（all of the entries along the main diagonal are 1, while all of the other entries are zero）。通常用$$I_n$$表示n维的单位矩，$$I_n$$ ∈ $$R^{n*n} $$, and ∀x ∈ $$R^n$$,$$I_nx = x$$
     - 矩阵逆（matrix inverse）: $$A^{-1}A=I_n$$ ,也可以写作$$AA^{-1}=I_n$$，左逆和右逆是一样。 
+##### 2.3 Identity and Inverse Matrices （矩阵的逆）
 - 我们学习线性代数，目标就是要解方程：**Ax = b**（`P5-center,equation 2.11`），A是一个矩阵(∈$$R^{m*n}$$)，b是一个向量( ∈$$R^m$$)，都是已知，要求解向量x( ∈$$R^n$$)的值。如下：
 
     **Ax = b**
@@ -82,5 +84,6 @@
 ##### 2.6 一些特殊矩阵或者向量(Special Kinds of Matrics and Vectors):
 - **对角矩阵（Diagonal matrices）**: `P10-bottom``,除了主对角线，其他元素都是0.比如单元矩阵就算是其中一个。通常用 diag(**v**)的形式 来表示**对角方矩阵（square diagonal matrix）（注意这里是方矩阵！）**,其中**v**对应矩阵的对角线（We write diag(v) to denote a square diagonal matrix whose diagonal entries are given by the entries of the vector v）。对角矩阵比较吸引人的地方在于计算代价低：
     - 与一个**对角方矩阵相乘(注意这里是方矩阵)**的计算代价非常低，比如计算： diag(**v**)**x**，我们仅仅需要将v和x点乘，即 $$diag(v)x = v \odot x$$(To compute diag(v)x, we only need to scale each element $$x_i$$ by $$v_i$$. In other words, $$diag(v)x = v \odot x$$)。 
-    - 对一个**对角方矩阵求逆（注意这里是方矩阵）**也是非常方便（Inverting a square diagonal matrix is also efficient）。当每个对角元素非0时，有逆矩阵
+    - 对一个**对角方矩阵求逆（注意这里是方矩阵）**也是非常方便（Inverting a square diagonal matrix is also efficient）。当每个对角元素非0时，对角方矩阵有逆矩阵（很明显，当有n个元素是0的时候，对角方矩阵的columns space就少了n列，导致方矩阵的columns space 列小于行，此时可能无解。详见 `2.3 Identity and Inverse Matrices （矩阵的逆）`）。当对角方矩阵存在inverse时，计算公式如下：
+        $$diag(\mathbf{v})^{-1} = diag(\left[ \frac{1}{v_1},...,\frac{1}{v_n} \right]^T)$$
         
