@@ -100,7 +100,17 @@
 
 - **正交（orthogonal）**： 如果$$\mathbf{x^Ty}=0$$,则 x 和 y正交。 **如果x和y的norm都是非0,则向量之间有90度夹**角。在$$R^n$$空间里，最多有n个非0向量是相互正交的。假如向量不仅相互正交，而且都是单元向量，则叫做 **标准正交（orthonormal,注意两个单词）**。
     - **正交矩阵：所有行都两两标准正交，所有列也都两辆标准正交的方矩阵（注意是方矩阵）,注意是标准正交，不仅仅是正交**，此时有： $$\mathbf{A^TA} = \mathbf{AA^T} =\mathbf{I} \qquad (2.37) $$。
-        - **important point**: 这也意味着： 此时，$$A^{-1} = A^T \qquad (2.38)$$,所以正交矩阵有着非常好的性质，即 逆矩阵的计算非常廉价（so rthogonal matrices are of interest because their inverse is very cheap to compute）。
+        - **important point**: 这也意味着： 此时，$$\mathbf{A^{-1}} = \mathbf{A^T} \qquad (2.38)$$,所以正交矩阵有着非常好的性质，即 逆矩阵的计算非常廉价（so rthogonal matrices are of interest because their inverse is very cheap to compute）。
         
 ##### 2.7 特征分解(Eigendecomposition)
-- 对矩阵进行分解，以分析矩阵的某些性质。ssk
+- 对矩阵进行分解，以分析矩阵的某些性质。Eigendecomposition 是最常用的矩阵分解，它将矩阵分解成一系列的特征向量和特征值(we decompose a matrix into a set of eigenvectors and eigenvalues)。
+    - **一个方矩阵的 特征向量（eigenvetor） 是一个非0向量，乘以矩阵$$\mathbf{A}$$仅仅相当于缩放了** $$\mathbf{v}$$ 的大小：$$\mathbf{Av} = \lambda \mathbf{v}$$ 。而其中$$\lambda$$就是**对应该特征向量的特征值（eigenvalue）**。同时 对于 $$s\mathbf{v} \qquad s \in R,s \neq 0 $$ 都有**同样的 特征值**（eigenvalue），所以**通常找到单位特征向量即可**（If v is an eigenvector of A, then so is any rescaled vector sv for s ∈ R,s $$\neq$$ 0. Moreover, sv still has the same eigenvalue. For this reason, we usually only look for unit eigenvectors）。
+    - 矩阵A的特征分解公式：其中V是由A的特征向量拼接的（一个eigenvetor对应V的一列），而$$\mathbf{\lambda}$$是特征值拼接的向量。
+        $$\mathbf{A} = \mathbf{V diag(\lambda)V^{-1}}\qquad (2.40)$$
+    - 不是所有的矩阵都可以特征分解，或者某些情况下可以分解，但是涉及到复数，而不是实数。幸运的是，对应任意实对称矩阵一定可以被分解为实数特征向量和特征值：$$\mathbf{A = Q \Lambda Q^T}$$,而且由A的特征向量构成的矩阵Q是一个**正交矩阵**，而$$\Lambda$$是一个对角矩阵，The eigenvalue $$Λ_{i,i}$$ is associated with the eigenvector in column i of Q, denoted as $$Q_{:,i}$$。
+    - **important point:** diagonalizable matrices can be factorized in this way（只有可）.对角化矩阵才能特征分解。特征分解
+    - 
+    - 正定矩阵，半正定矩阵
+    
+##### 2.11 The Determinant()
+- 方矩阵的determinant表示为$$det(\mathbf{A})$$，也是一个将矩阵映射为实数的矩阵。
